@@ -8,6 +8,13 @@
     display: flex;
     flex-direction: column;
 }
+
+/* -----------------------------------------------------------------------------
+
+  MENU
+  
+----------------------------------------------------------------------------- */
+
 .navigation {
     display: flex;
     position: fixed;
@@ -201,8 +208,6 @@ a:focus {
 /**
  * 
  * 
- * Hamburger to "x" (htx). Takes on a hamburger shape, bars slide
- * down to center and transform into an "x".
  */
 
 .c-hamburger--htx {
@@ -254,6 +259,13 @@ a:focus {
     -webkit-transition-delay: 0s, 0.3s;
     transition-delay: 0s, 0.3s;
 }
+
+/* -----------------------------------------------------------------------------
+
+    BANNER SECTION
+  
+----------------------------------------------------------------------------- */
+
 .banner {
     background-color: #FF9800;
     margin-top: 65px;
@@ -298,6 +310,13 @@ a:focus {
 .flower .picture {
     width: 100%;
 }
+
+/* -----------------------------------------------------------------------------
+
+  ABOUT SECTION
+  
+----------------------------------------------------------------------------- */
+
 .about {
     align-items: center;
     background-color: black;
