@@ -544,19 +544,20 @@ Intro page
     width: 90%;
     margin: 0 auto .6em;
     font-size: 2.4rem;
-    color: #ebebeb;
+    color: #fff;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 .cd-intro-block.projects-visible {
     /* translate the .cd-intro-block element to reveal the projects slider */
-    -webkit-transform: translateY(-90%);
-    -moz-transform: translateY(-90%);
-    -ms-transform: translateY(-90%);
-    -o-transform: translateY(-90%);
-    transform: translateY(-90%);
+    -webkit-transform: translateY(-85%);
+    -moz-transform: translateY(-85%);
+    -ms-transform: translateY(-85%);
+    -o-transform: translateY(-85%);
+    transform: translateY(-85%);
     box-shadow: 0 4px 40px rgba(0, 0, 0, 0.6);
     cursor: pointer;
+    margin-top: 0;
 }
 .cd-intro-block.projects-visible:after {
     /* show arrow icon */
@@ -571,11 +572,11 @@ Intro page
         font-weight: 300;
     }
     .cd-intro-block.projects-visible {
-        -webkit-transform: translateY(-95%);
-        -moz-transform: translateY(-95%);
-        -ms-transform: translateY(-95%);
-        -o-transform: translateY(-95%);
-        transform: translateY(-95%);
+        -webkit-transform: translateY(-85%);
+        -moz-transform: translateY(-85%);
+        -ms-transform: translateY(-85%);
+        -o-transform: translateY(-85%);
+        transform: translateY(-85%);
     }
 }
 
@@ -593,7 +594,7 @@ Projects Slider
     width: 100%;
     height: 100%;
     visibility: hidden;
-    background-color: #0f1926;
+    background-color: #7E8AA2;
     -webkit-transition: visibility 0s 0.5s;
     -moz-transition: visibility 0s 0.5s;
     transition: visibility 0s 0.5s;
@@ -640,6 +641,7 @@ Projects Slider
     transform: translateZ(0);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    list-style: none;
 }
 .cd-slider li.slides-in {
     -webkit-transition: opacity 0s 0s;
@@ -1135,7 +1137,7 @@ Project content panel
     width: 100%;
     height: 100%;
     visibility: hidden;
-    background-color: #ebebeb;
+    background-color: snow;
     /* Force Hardware Acceleration */
     -webkit-transform: translateZ(0);
     -moz-transform: translateZ(0);
