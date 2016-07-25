@@ -68,11 +68,11 @@
     });
 
 
-    var intro = $('.cd-intro-block'),
-        projectsContainer = $('.cd-projects-wrapper'),
-        projectsSlider = projectsContainer.children('.cd-slider'),
-        singleProjectContent = $('.cd-project-content'),
-        sliderNav = $('.cd-slider-navigation');
+    var intro = $('.intro-block'),
+        projectsContainer = $('.projects-wrapper'),
+        projectsSlider = projectsContainer.children('.slider'),
+        singleProjectContent = $('.project-content'),
+        sliderNav = $('.slider-navigation');
 
     var resizing = false;
 
@@ -106,7 +106,7 @@
     });
 
     //select a single project - open project-content panel
-    projectsContainer.on('click', '.cd-slider a', function (event) {
+    projectsContainer.on('click', '.slider a', function (event) {
         var mq = checkMQ();
         event.preventDefault();
         if ($(this).parent('li').next('li').is('.current') && (mq == 'desktop')) {
@@ -114,7 +114,9 @@
         } else if ($(this).parent('li').prev('li').prev('li').prev('li').is('.current') && (mq == 'desktop')) {
             nextSides(projectsSlider);
         } else {
-            singleProjectContent.addClass('is-visible');
+            var id = $(this).attr("href");
+            //choose the correct project panell to open
+            $("" + id + "").addClass('is-visible');
         }
     });
 
@@ -165,7 +167,7 @@
 
     function checkMQ() {
         //check if mobile or desktop device
-        return window.getComputedStyle(document.querySelector('.cd-projects-wrapper'), '::before').getPropertyValue('content').replace(/'/g, "").replace(/"/g, "");
+        return window.getComputedStyle(document.querySelector('.projects-wrapper'), '::before').getPropertyValue('content').replace(/'/g, "").replace(/"/g, "");
     }
 
     function setSliderContainer() {
