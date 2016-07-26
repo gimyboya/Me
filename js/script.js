@@ -76,6 +76,52 @@
 
     var resizing = false;
 
+    // up: 38, down: 40,
+    // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
+    //stopping the scroll from the keyboard
+    var keys = {
+        38: 1,
+        40: 1,
+        32: 1,
+        33: 1,
+        34: 1,
+        35: 1,
+        36: 1
+    };
+
+    function preventDefault(e) {
+        e = e || window.event;
+        if (e.preventDefault)
+            e.preventDefault();
+        e.returnValue = false;
+    }
+
+    function preventDefaultForScrollKeys(e) {
+        if (keys[e.keyCode]) {
+            preventDefault(e);
+            return false;
+        }
+    }
+
+    function disableScroll() {
+        if (window.addEventListener) // older FF
+            window.addEventListener('DOMMouseScroll', preventDefault, false);
+        window.onwheel = preventDefault; // modern standard
+        window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
+        window.ontouchmove = preventDefault; // mobile
+        document.onkeydown = preventDefaultForScrollKeys;
+    }
+
+    function enableScroll() {
+        if (window.removeEventListener)
+            window.removeEventListener('DOMMouseScroll', preventDefault, false);
+        window.onmousewheel = document.onmousewheel = null;
+        window.onwheel = null;
+        window.ontouchmove = null;
+        document.onkeydown = null;
+    }
+
+
     //if on desktop - set a width for the projectsSlider element
     setSliderContainer();
     $(window).on('resize', function () {
@@ -95,10 +141,11 @@
         setTimeout(function () {
             showProjectPreview(projectsSlider.children('li').eq(0));
         }, 200);
+        //hide the navigation bar
+        $("header").hide();
         //stopping the scrolling of the body
-        $('body').on('wheel.modal mousewheel.modal touchmove.modal', function () {
-            return false;
-        });
+        disableScroll();
+
     });
 
     intro.on('click', function (event) {
@@ -106,7 +153,10 @@
         if (intro.hasClass('projects-visible') && !$(event.target).is('a[data-action="show-projects"]')) {
             intro.removeClass('projects-visible');
             projectsContainer.removeClass('projects-visible');
-            $('body').off('wheel.modal mousewheel.modal touchmove.modal');
+            //show the navigation bar
+            $("header").show();
+            //bring back the scrolling functionalities to the page
+            enableScroll();
         }
     });
 
