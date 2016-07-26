@@ -342,7 +342,7 @@ a:focus {
     color: #7E8AA2;
     font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 400;
     font-size: 2em;
     line-height: 2em;
     letter-spacing: 3px;
@@ -1273,4 +1273,25 @@ Keyframes
         transform: translateY(0);
         opacity: 1;
     }
+}
+
+/* -------------------------------- 
+
+contact 
+
+-------------------------------- */
+
+.contact {
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #7e8aa2;
+}
+.contact div {
+    margin: 0 auto;
+}
+.contact div h2 {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 3vw;
+    color: #0f1926;
 }
