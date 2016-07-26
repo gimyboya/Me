@@ -95,6 +95,10 @@
         setTimeout(function () {
             showProjectPreview(projectsSlider.children('li').eq(0));
         }, 200);
+        //stopping the scrolling of the body
+        $('body').on('wheel.modal mousewheel.modal touchmove.modal', function () {
+            return false;
+        });
     });
 
     intro.on('click', function (event) {
@@ -102,6 +106,7 @@
         if (intro.hasClass('projects-visible') && !$(event.target).is('a[data-action="show-projects"]')) {
             intro.removeClass('projects-visible');
             projectsContainer.removeClass('projects-visible');
+            $('body').off('wheel.modal mousewheel.modal touchmove.modal');
         }
     });
 
