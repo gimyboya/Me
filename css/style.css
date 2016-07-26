@@ -550,11 +550,11 @@ Intro page
 }
 .intro-block.projects-visible {
     /* translate the .intro-block element to reveal the projects slider */
-    -webkit-transform: translateY(-85%);
-    -moz-transform: translateY(-85%);
-    -ms-transform: translateY(-85%);
-    -o-transform: translateY(-85%);
-    transform: translateY(-85%);
+    -webkit-transform: translateY(-90%);
+    -moz-transform: translateY(-90%);
+    -ms-transform: translateY(-90%);
+    -o-transform: translateY(-90%);
+    transform: translateY(-90%);
     box-shadow: 0 4px 40px rgba(0, 0, 0, 0.6);
     cursor: pointer;
     margin-top: 0;
@@ -572,11 +572,11 @@ Intro page
         font-weight: 300;
     }
     .intro-block.projects-visible {
-        -webkit-transform: translateY(-85%);
-        -moz-transform: translateY(-85%);
-        -ms-transform: translateY(-85%);
-        -o-transform: translateY(-85%);
-        transform: translateY(-85%);
+        -webkit-transform: translateY(-95%);
+        -moz-transform: translateY(-95%);
+        -ms-transform: translateY(-95%);
+        -o-transform: translateY(-95%);
+        transform: translateY(-95%);
     }
 }
 

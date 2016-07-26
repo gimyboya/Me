@@ -108,7 +108,9 @@
             window.addEventListener('DOMMouseScroll', preventDefault, false);
         window.onwheel = preventDefault; // modern standard
         window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
-        window.ontouchmove = preventDefault; // mobile
+        intro.on("touchmove", function () {
+            return false;
+        });
         document.onkeydown = preventDefaultForScrollKeys;
     }
 
@@ -117,7 +119,7 @@
             window.removeEventListener('DOMMouseScroll', preventDefault, false);
         window.onmousewheel = document.onmousewheel = null;
         window.onwheel = null;
-        window.ontouchmove = null;
+        intro.off("touchmove");
         document.onkeydown = null;
     }
 
