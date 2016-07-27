@@ -1194,6 +1194,13 @@ Project content panel
     margin-left: auto;
     margin-right: auto;
 }
+.project-content > div > a {
+    display: block;
+}
+.project-content > div > a > img {
+    margin-bottom: 200px;
+    width: 100%;
+}
 .project-content.is-visible {
     visibility: visible;
     -webkit-transform: translateY(0);
