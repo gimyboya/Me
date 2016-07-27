@@ -5,7 +5,7 @@
 			[].slice.call(document.querySelectorAll('.menu')).forEach(function (menu) {
         var menuItems = menu.querySelectorAll('.menu__link'),
             setCurrent = function (ev) {
-                ev.preventDefault();
+
 
                 var item = ev.target.parentNode; // li
 
