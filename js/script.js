@@ -61,7 +61,7 @@
 
         $(".flower").css({
 
-            "transform": "translate(0px, " + wScroll / 11 + "%)"
+            "transform": "translate(0px, " + wScroll / 8 + "%)"
 
         });
 
