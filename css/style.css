@@ -1283,15 +1283,77 @@ contact
 
 .contact {
     justify-content: center;
-    min-height: 100vh;
+    min-height: 90vh;
     background-color: #7e8aa2;
 }
-.contact div {
-    margin: 0 auto;
+.contact a {
+    display: block;
+    text-align: center;
 }
-.contact div h2 {
+.contact a h2 {
     text-transform: uppercase;
     font-weight: 400;
-    font-size: 3vw;
+    margin-bottom: 45px;
+    font-size: 7vw;
     color: #0f1926;
+}
+.contact a span {
+    font-family: 'Yeseva One', serif;
+    text-transform: capitalize;
+    font-size: 4vw;
+    color: #0f1926;
+    font-style: italic;
+    display: block;
+    margin: 0 auto;
+}
+.contact a span:hover {
+    text-decoration: overline;
+    cursor: pointer;
+}
+@media screen and (max-width:1024px) {
+    .contact a h2 {
+        font-size: 8vw;
+    }
+    .contact a span {
+        font-size: 7vw;
+    }
+}
+@media screen and (max-width:768px) {
+    .contact a h2 {
+        font-size: 11vw;
+    }
+    .contact a span {
+        font-size: 9vw;
+    }
+}
+
+/* -------------------------------- 
+
+Footer 
+
+-------------------------------- */
+
+footer {
+    background-color: #7e8aa2;
+    min-height: 10vh;
+}
+footer div {
+    margin: 0em 5vw;
+    align-self: flex-end;
+    font-size: 2.6vw;
+}
+footer a {
+    color: #0f1926;
+}
+@media screen and (max-width:1024px) {
+    footer div {
+        font-size: 5vw;
+        align-self: center;
+    }
+}
+@media screen and (max-width:768px) {
+    footer div {
+        font-size: 7vw;
+        align-self: center;
+    }
 }
