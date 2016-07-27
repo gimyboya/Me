@@ -164,7 +164,7 @@
     });
 
     //close the slider with the close button
-    $sliderclose.on("click", function () {
+    $sliderclose.on("click", function (event) {
         //projects slider is visible - hide slider and show the intro panel
         if (intro.hasClass('projects-visible') && !$(event.target).is('a[data-action="show-projects"]')) {
             intro.removeClass('projects-visible');
