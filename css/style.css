@@ -14,6 +14,24 @@
     display: flex;
     flex-direction: column;
 }
+.navigation {
+    z-index: 20;
+}
+.banner {
+    z-index: 2;
+}
+.about {
+    z-index: 3;
+}
+.projects-wrapper {
+    z-index: 4;
+}
+.intro-block {
+    z-index: 5;
+}
+.project-content {
+    z-index: 6;
+}
 
 /* -----------------------------------------------------------------------------
 
@@ -27,7 +45,6 @@
     width: 100%;
     height: 80px;
     background-color: #263248;
-    z-index: 20;
 }
 .menu {
     line-height: 1;
@@ -451,7 +468,7 @@ a:focus {
 
 /* -----------------------------------------------------------------------------
 
-  PROFILE SECTION
+  PORTFOLIO SECTION
   
 ----------------------------------------------------------------------------- */
 
@@ -490,6 +507,9 @@ Patterns - reusable parts of our design
     text-indent: 100%;
     white-space: nowrap;
 }
+.portfolio {
+    margin-bottom: 100vh;
+}
 
 /* -------------------------------- 
 
@@ -499,7 +519,6 @@ Intro page
 
 .intro-block {
     position: relative;
-    z-index: 2;
     height: 100vh;
     width: 100%;
     background-color: #263248;
@@ -588,7 +607,6 @@ Projects Slider
 
 .projects-wrapper {
     position: fixed;
-    z-index: 1;
     top: 0;
     left: 0;
     width: 100%;
@@ -609,6 +627,15 @@ Projects Slider
     -webkit-transition: visibility 0s 0s;
     -moz-transition: visibility 0s 0s;
     transition: visibility 0s 0s;
+}
+.projects-wrapper .close {
+    display: block;
+    height: 32px;
+    width: 32px;
+    position: absolute;
+    top: 30px;
+    right: 10%;
+    background: url(../img/close-dark.svg) no-repeat center center;
 }
 @media only screen and (min-width: 900px) {
     .projects-wrapper::before {
@@ -1131,7 +1158,6 @@ Project content panel
 
 .project-content {
     position: fixed;
-    z-index: 3;
     top: 0;
     left: 0;
     width: 100%;
@@ -1285,6 +1311,8 @@ contact
     justify-content: center;
     min-height: 90vh;
     background-color: #7e8aa2;
+    position: fixed;
+    bottom: 10vh;
 }
 .contact a {
     display: block;
@@ -1336,6 +1364,9 @@ Footer
 footer {
     background-color: #7e8aa2;
     min-height: 10vh;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 footer div {
     margin: 0em 5vw;
@@ -1356,4 +1387,7 @@ footer a {
         font-size: 7vw;
         align-self: center;
     }
+}
+::selection {
+    background: #ff9800;
 }

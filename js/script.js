@@ -72,7 +72,8 @@
         projectsContainer = $('.projects-wrapper'),
         projectsSlider = projectsContainer.children('.slider'),
         singleProjectContent = $('.project-content'),
-        sliderNav = $('.slider-navigation');
+        sliderNav = $('.slider-navigation'),
+        $sliderclose = $(".projects-wrapper .close");
 
     var resizing = false;
 
@@ -151,6 +152,19 @@
     });
 
     intro.on('click', function (event) {
+        //projects slider is visible - hide slider and show the intro panel
+        if (intro.hasClass('projects-visible') && !$(event.target).is('a[data-action="show-projects"]')) {
+            intro.removeClass('projects-visible');
+            projectsContainer.removeClass('projects-visible');
+            //show the navigation bar
+            $("header").show();
+            //bring back the scrolling functionalities to the page
+            enableScroll();
+        }
+    });
+
+    //close the slider with the close button
+    $sliderclose.on("click", function () {
         //projects slider is visible - hide slider and show the intro panel
         if (intro.hasClass('projects-visible') && !$(event.target).is('a[data-action="show-projects"]')) {
             intro.removeClass('projects-visible');
