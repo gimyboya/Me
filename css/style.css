@@ -731,7 +731,7 @@ Projects Slider
     border-radius: 0 0 .25em .25em;
 }
 .slider h2 {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     font-weight: bold;
     line-height: 1.2;
 }
@@ -762,6 +762,9 @@ Projects Slider
         transform: translateZ(0);
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
+    }
+    .slider h2 {
+        font-size: 2rem;
     }
     .slider::after {
         clear: both;
@@ -1214,7 +1217,7 @@ contact
 .contact a h2 {
     text-transform: uppercase;
     font-weight: 400;
-    margin-bottom: 45px;
+    margin: 45px 20px;
     font-size: 7vw;
     color: #0f1926;
 }
