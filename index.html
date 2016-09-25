@@ -108,10 +108,47 @@
     </section>
     <a name="contact"></a>
     <section class="segment contact">
-        <a href="mailto:b.afatah@yahoo.com">
+        <span>
             <h2>In every end, <br>there is also a beginning.<br></h2>
             <span>Let's chat.</span>
-        </a>
+        </span>
+        <form class="cd-form floating-labels">
+            <fieldset>
+                <legend>Contact Me</legend>
+
+                <div class="error-message">
+                    <p>Please enter a valid email address</p>
+                </div>
+
+                <div class="icon">
+                    <label class="cd-label" for="cd-name">Name</label>
+                    <input class="user" type="text" name="cd-name" id="cd-name" required>
+                </div>
+
+                <div class="icon">
+                    <label class="cd-label" for="cd-company">Company</label>
+                    <input class="company" type="text" name="cd-company" id="cd-company">
+                </div>
+
+                <div class="icon">
+                    <label class="cd-label" for="cd-email">Email</label>
+                    <input class="email error" type="email" name="cd-email" id="cd-email" required>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <div class="icon">
+                    <label class="cd-label" for="cd-textarea">Tell me Hi!</label>
+                    <textarea class="message" name="cd-textarea" id="cd-textarea" required></textarea>
+                </div>
+
+                <div>
+                    <input type="submit" value="Start chatting">
+                </div>
+            </fieldset>
+
+        </form>
+
     </section>
     <footer class="segment">
         <div>
