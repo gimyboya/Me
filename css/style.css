@@ -561,9 +561,6 @@ Patterns - reusable parts of our design
     text-indent: 100%;
     white-space: nowrap;
 }
-.portfolio {
-    margin-bottom: 100vh;
-}
 
 /* -------------------------------- 
 
@@ -1094,7 +1091,7 @@ Project content panel
     padding: 4em 2em;
 }
 .project-content > div > * {
-    max-width: 900px;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -1205,15 +1202,13 @@ contact
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    min-height: 90vh;
     background-color: #7e8aa2;
-    position: fixed;
-    bottom: 10vh;
     width: 100%;
 }
 .contact span {
     display: block;
     text-align: center;
+    margin-top: 54px;
 }
 .contact span h2 {
     text-transform: uppercase;
@@ -1306,7 +1301,7 @@ Form
 .cd-form select,
 .cd-form legend {
     display: block;
-    width: 100%;
+    width: calc(100% - 54px);
     -webkit-appearance: none;
     -moz-appearance: none;
     -ms-appearance: none;
@@ -1575,6 +1570,11 @@ Custom icons
 
 -------------------------------- */
 
+.cd-form .icon input,
+.cd-form .icon select,
+.cd-form .icon textarea {
+    padding-left: 54px !important;
+}
 .cd-form .user {
     background: url("../img/cd-icon-user.svg") no-repeat 16px center;
 }

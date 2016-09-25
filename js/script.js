@@ -2,6 +2,8 @@
 
     "use strict";
 
+    //navigation
+
 			[].slice.call(document.querySelectorAll('.menu')).forEach(function (menu) {
         var menuItems = menu.querySelectorAll('.menu__link'),
             setCurrent = function (ev) {
@@ -24,6 +26,7 @@
         });
     });
 
+    //navigation-icon
     var toggle = document.querySelector(".c-hamburger");
     var menu = document.querySelector(".menu");
     var nav = document.querySelector(".navigation");
@@ -45,6 +48,7 @@
         });
     }
 
+    //parallax in the banner
     $(window).scroll(function () {
 
         var wScroll = $(this).scrollTop();
@@ -68,6 +72,7 @@
     });
 
 
+    //gallery 
     var intro = $('.intro-block'),
         projectsContainer = $('.projects-wrapper'),
         projectsSlider = projectsContainer.children('.slider'),
@@ -336,6 +341,26 @@
             '-o-transform': 'translateX(-' + translate + ')',
             'transform': 'translateX(-' + translate + ')',
         });
+    }
+
+    //forms
+
+    if ($('.floating-labels').length > 0) floatLabels();
+
+    function floatLabels() {
+        var inputFields = $('.floating-labels .cd-label').next();
+        inputFields.each(function () {
+            var singleInput = $(this);
+            //check if user is filling one of the form fields 
+            checkVal(singleInput);
+            singleInput.on('change keyup', function () {
+                checkVal(singleInput);
+            });
+        });
+    }
+
+    function checkVal(inputField) {
+        (inputField.val() == '') ? inputField.prev('.cd-label').removeClass('float'): inputField.prev('.cd-label').addClass('float');
     }
 
 })(window);
