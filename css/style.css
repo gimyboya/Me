@@ -1094,7 +1094,7 @@ Project content panel
     padding: 4em 2em;
 }
 .project-content > div > * {
-    max-width: 800px;
+    max-width: 900px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -1269,7 +1269,8 @@ Form
     display: table;
 }
 .cd-form fieldset {
-    margin: 24px 0;
+    border-width: 0px !important;
+    width: 100%;
 }
 .cd-form legend {
     padding-bottom: 10px;
@@ -1285,7 +1286,7 @@ Form
 .cd-form h4,
 .cd-form .cd-label {
     font-size: 1.3rem;
-    color: #94aab0;
+    color: #263248;
     margin-bottom: 10px;
 }
 .cd-form .cd-label {
@@ -1317,9 +1318,9 @@ Form
 .cd-form textarea,
 .cd-form select {
     /* general style for input elements */
-    padding: 12px;
+    padding: 12px 0;
     border: 1px solid #cfd9db;
-    background-color: #ffffff;
+    background-color: #ffffff !important;
     border-radius: .25em;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08);
 }
@@ -1464,12 +1465,13 @@ Form
 .cd-form input[type="submit"] {
     /* button style */
     border: none;
-    background: #2c97de;
-    border-radius: .25em;
+    background: #263248;
     padding: 16px 20px;
-    color: #ffffff;
+    color: #FF9800;
     font-weight: bold;
-    float: right;
+    width: 100%;
+    margin: auto 0px;
+    align-items: center;
     cursor: pointer;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -1498,7 +1500,7 @@ Form
 }
 .cd-form .error-message p {
     background: #e94b35;
-    color: #ffffff;
+    color: #ffffff !important;
     font-size: 1.4rem;
     text-align: center;
     -webkit-font-smoothing: antialiased;
@@ -1516,7 +1518,8 @@ Form
     }
     .cd-form legend + div {
         /* reduce margin-top for first form element after the legend */
-        margin-top: 20px;
+        margin: auto 20px;
+        position: absolute;
     }
     .cd-form h4,
     .cd-form .cd-label {
@@ -1527,7 +1530,7 @@ Form
     .cd-form input[type="email"],
     .cd-form textarea,
     .cd-form select {
-        padding: 16px;
+        padding: 16px 0;
     }
 }
 @-webkit-keyframes cd-bounce {
@@ -1572,11 +1575,6 @@ Custom icons
 
 -------------------------------- */
 
-.cd-form .icon input,
-.cd-form .icon select,
-.cd-form .icon textarea {
-    padding-left: 54px !important;
-}
 .cd-form .user {
     background: url("../img/cd-icon-user.svg") no-repeat 16px center;
 }
